@@ -1,0 +1,33 @@
+<html>
+    <head>
+<style>
+     button{
+        background-color: aquamarine;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+    }
+</style>
+    </head>
+    <body>
+<button id="joke" > Generate Random activity</button>
+<div id="joke-container">
+</div>
+<script>
+    document.getElementById("joke").addEventListener("click",async () => {
+        const response = await fetch('https://official-joke-api.appspot.com/random_joke')
+        console.log(response);
+
+        const data = await response.json()
+        console.log(data);
+        console.log(data.setup);
+        console.log(data.punchline);
+        const p = document.createElement("p")
+        p.textContent = data.setup + '-' + data.punchline
+        console.log(p);
+        document.getElementById("joke-container").appendChild(p)
+    })
+
+</script>
+    </body>
+</html>

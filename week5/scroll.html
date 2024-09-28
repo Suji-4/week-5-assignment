@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Scroll image</title>
+    </head>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+        }
+        .scroll-image{
+           position: absolute;
+            top: 0;
+            left:0;
+            align-items:center ;
+            padding-top: 20%;
+            display: flex;
+            gap: 20px;  
+            background-repeat: repeat-x;
+            animation: scroll 15s linear infinite;
+            
+        }
+        .scroll-container
+         {
+          position: relative;
+          width: 100%;
+          height: 100vh; 
+          overflow: hidden; 
+          background-color: lightblue;
+          
+       }
+       h1{
+        text-align: center;
+        padding: 10%;
+        color: white;
+       }
+       .scroll-image img{
+       border-radius: 10px;
+       
+       
+       }
+       @keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%); /* Move left half the width of the image */
+    }
+}
+
+    </style>
+    <body>
+        <div class="scroll-container ">
+            <h1>Continue Scrolling Image using HTML and CSS</h1>
+            <div class="scroll-image">
+         <img src="./images/c.jpg" width="250px" height="200px">
+         <img src="./images/j.jpg" width="250px" height="200px">
+         <img src="./images/yoshi.jpg" width="250px"height="200px">
+         <img src="./images/kim.jpg" width="250px" height="200px">
+         <img src="./images/yoon.jpg" width="250px"height="200px">
+         <img src="./images/a.jpg" width="250px"height="200px">
+         <img src="./images/dobby.jpg" width="250px"height="200px">
+         <img src="./images/haru.jpg" width="250px"height="200px">
+         <img src="./images/park.jpg" width="250px"height="200px">
+         <img src="./images/so.jpg" width="250px"height="200px">
+            </div>
+
+        </div>
+    </body>
+</html>
